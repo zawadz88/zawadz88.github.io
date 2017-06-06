@@ -2,39 +2,26 @@ source: app
 destination: app/_site
 
 # Site settings
-title: Jekyll Polymer Theme
-subtitle: Google material design for static sites
+title: Piotr Zawadzki
+subtitle: Senior Android Developer
 description: > # this means to ignore newlines until "baseurl:"
-  This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
+  Piotr Zawadzki's profile page.
+author: Piotr Zawadzki
+author_website: https://zawadz88.github.io
+email: zawadz88@gmail.com
 
-author: Julia Ebert
-author_website: http://juliaebert.com
-email: julia@juliaebert.com
-
-baseurl: "/jekyll-polymer"  # Subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
+#baseurl: "/jekyll-polymer"  # Subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
                             # Currently `gulp serve:dist` does not work with a baseurl specified. For this purpose,
                             # temporarily comment out this parameter
-url: "http://juliaebert.com"  # Base hostname & protocol for your site
+url: "https://zawadz88.github.io"  # Base hostname & protocol for your site
 
-twitter_username: ''
-github_username:  jtebert
-disqus_shortname: juliaebert
-google_analytics: UA-54476418-1
-
-# Pagination
-paginate: 5
-paginate_path: "page:num"
-excerpt_separator: <!--more-->
+github_username:  zawadz88
+linkedin_username: piotr-zawadzki-66343833
+stackoverflow_user_id: 973379
 
 # Gems
 gems:
-  - jekyll-archives
-  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title/
-
-# Archive settings
-jekyll-archives:
-  enabled: ['tags']

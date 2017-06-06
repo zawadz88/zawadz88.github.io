@@ -19,5 +19,8 @@
     "iron-elements": "polymerelements/iron-elements#^1.0.8",
     "paper-elements": "polymerelements/paper-elements#^1.0.7",
     "simple-jekyll-search": "^1.1.1"
+  },
+  "resolutions": {
+    "polymer": "^1.7.0"
   }
 }

@@ -1,59 +1,24 @@
 ---
 layout: default
+title: Piotr Zawadzki
+subtitle: Senior Android Developer
+permalink: /
+image: "about_me.png"
 ---
 
-
 <div class="card-wrapper">
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-
-  <paper-card class="custom"
-          {% if post.image %}
-              image="{{ site.baseurl }}/images/posts/{{ post.image }}"
-          {% endif %}>
-    <div class="card-content">
-      <div class="title">{{ post.title }}</div>
-      {% include author-byline.html %}
-      <!--<div class="subtitle">{{ post.date | date: '%Y %B %-d' }}</div>-->
-      {{ post.excerpt }}
-    </div>
-    <div class="card-actions">
-      <a href="{{ site.baseurl }}{{ post.url }}"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
-
-{% endfor %}
+    <paper-card class="custom"
+                {% if page.image %}
+                image="{{ site.baseurl }}/images/{{ page.image }}"
+                {% endif %}>
+        <div class="card-content">
+            <div class="title">About me</div>
+            
+      			<p>I'm an experienced Android developer with previous experience in Java backend development with 6+ years as a Java developer and 5 years in Android.</p>
+      			<p>I'm a big fan of Material design and not a stranger to actually implementing it in real apps. I've also released two Android Material libraries on GitHub (+ some other stuff).</p>
+      			<p>I love writing GOOD unit tests (integration and UI tests as well).</p>
+      			<p>I would describe myself as a fun person to hang out with and I always bring good humour to the team I'm working in.</p>
+      			<p>On a more personal level, I'm a loving husband with a passion for photography, travelling (I ❤️ Australia) and cooking.</p>
+        </div>
+    </paper-card>
 </div>
-
-<!-- Page navigation links -->
-{% if paginator.total_pages > 1 %}
-<my-pagination>
-  <!-- Left Arrow -->
-  {% if paginator.previous_page %}
-  <my-page-link href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">
-    <iron-icon icon="chevron-left"></iron-icon>
-  </my-page-link>
-  {% else %}
-  <my-page-link disabled><iron-icon icon="chevron-left"></iron-icon></my-page-link>
-  {% endif %}
-
-  <!-- Page Numbers -->
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    <my-page-link active>{{ page }}</my-page-link>
-    {% elsif page == 1 %}
-    <my-page-link href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</my-page-link>
-    {% else %}
-    <my-page-link href="{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: ':num', page | replace: '//', '/' }}">{{ page }}</my-page-link>
-    {% endif %}
-  {% endfor %}
-
-  <!-- Right Arrow -->
-  {% if paginator.next_page %}
-  <my-page-link href="{{ paginator.next_page_path | prepend: site.baseurl }}"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
-  {% else %}
-  <my-page-link disabled><iron-icon icon="chevron-right"></iron-icon></my-page-link>
-  {% endif %}
-</my-pagination>
-
-{% endif %}
