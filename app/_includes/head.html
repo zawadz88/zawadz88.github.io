@@ -8,30 +8,15 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href='{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Chrome for Android theme color -->
-    <!-- TODO: Change to match final color scheme -->
     <meta name="theme-color" content="#607D8B">
 
-    <!-- Web Application Manifest -->
-    <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
 
     <!-- Tile color for Win8 -->
     <!-- TODO: Change to match final color scheme -->
     <meta name="msapplication-TileColor" content="#FF5722">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="{{ site.title }}">
-    <link rel="icon" sizes="192x192" href="{{ site.baseurl }}/images/touch/chrome-touch-icon-192x192.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/touch/apple-touch-icon.png">
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="{{ site.baseurl }}/styles/main.css">
