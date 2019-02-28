@@ -29,7 +29,10 @@
           <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><iron-icon icon="fa:linkedin-square"></iron-icon><span>LinkedIn</span></a>
           {% endif %}
           {% if site.github_username %}
-          <a href="https://github.com/{{ site.github_username }}"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          <a href="https://github.com/{{ site.github_username }}"><iron-icon icon="fa:github"></iron-icon><span>Github</span></a>
+          {% endif %}
+          {% if site.medium_username %}
+          <a href="https://medium.com/@{{ site.medium_username }}"><iron-icon icon="fa:medium"></iron-icon><span>Medium blog</span></a>
           {% endif %}
           {% if site.stackoverflow_user_id %}
           <a href="https://stackoverflow.com/users/{{ site.stackoverflow_user_id }}"><iron-icon icon="fa:stack-overflow"></iron-icon><span>StackOverflow</span></a>
@@ -84,7 +87,7 @@
 
 <!-- MathJax -->
 <script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 <!-- build:js scripts/app.js -->
